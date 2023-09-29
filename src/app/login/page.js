@@ -1,3 +1,5 @@
+import { AuthLogin } from '@/components/Auth/component/AuthLogin';
+
 export default function Page() {
-  return <div>Project Synthex</div>;
+  return <AuthLogin />;
 }

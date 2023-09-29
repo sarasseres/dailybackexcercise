@@ -1,3 +1,5 @@
+import { AuthRegister } from '@/components/Auth/component/AuthRegister';
+
 export default function Page() {
-  return <div>Project Synthex</div>;
+  return <AuthRegister />;
 }
