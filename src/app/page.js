@@ -1,5 +1,16 @@
-import Image from 'next/image';
+async function getData() {
+  const res = await fetch('http://localhost:3000/api/v1/auth/headers', {
+    headers: {
+      Authorization: `Bearer sfsfsffshshshs`,
+    },
+    cache: 'no-store',
+  });
+  const data = await res.json();
+  return data;
+}
 
-export default function Home() {
-  return <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>;
+export default async function Home() {
+  const data = await getData();
+  // console.log(data);
+  return <div className="">hey</div>;
 }
