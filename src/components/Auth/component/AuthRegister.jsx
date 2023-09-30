@@ -20,7 +20,7 @@ export const AuthRegister = () => {
       body: JSON.stringify(registerData),
     });
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
   };
   return (
     <main className="h-screen w-full  grid grid-cols-2">
