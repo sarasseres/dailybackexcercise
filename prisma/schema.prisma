@@ -6,13 +6,21 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url  	= env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
-model Blog {
-  id      Int    @id @default(autoincrement())
-  title   String
-  content String
-  author  String
+model User {
+  id String @id @default(cuid())
+  name String
+  email String 
+ password String? @default("passwordku")
+}
+
+model Member {
+  id String @id @default(cuid())
+  name String
+  email String @unique
+  password String? @default("passwordku")
 }
